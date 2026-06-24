@@ -216,6 +216,27 @@
   .note-couple{margin-top:1.8rem;text-align:center;max-width:560px;margin-inline:auto;font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:1.05rem;color:var(--ink)}
   .note-couple strong{font-style:normal;color:var(--violet-700);font-weight:500}
 
+  /* PLANA DOCENTE */
+  .docentes{background:var(--paper)}
+  .director{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.4rem,3vw,2.6rem);align-items:center;max-width:900px;margin:0 auto 2.8rem;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,1rem+2vw,2.4rem);box-shadow:var(--shadow-sm)}
+  .director img{width:clamp(140px,20vw,200px);aspect-ratio:1;object-fit:cover;border-radius:18px;border:2px solid var(--gold-line);box-shadow:var(--shadow-md)}
+  .director .role{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-ink)}
+  .director h3{font-size:clamp(1.5rem,1.2rem+1.3vw,2.1rem);font-weight:500;margin:.45rem 0 .7rem}
+  .director h3 .flag{font-size:.7em;margin-left:.2rem}
+  .director p{font-size:.98rem;color:var(--ink-soft)}
+  .ponentes-head{text-align:center;margin-bottom:1.6rem}
+  .ponentes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  .ponente{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem 1.5rem;text-align:center;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .ponente:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+  .ponente img{width:128px;height:128px;object-fit:cover;border-radius:50%;border:2px solid var(--gold-line);margin:0 auto 1.1rem;box-shadow:var(--shadow-sm)}
+  .ponente h3{font-size:1.18rem;font-weight:500;margin-bottom:.25rem;line-height:1.2}
+  .ponente .pais{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-ink);margin-bottom:.8rem}
+  .ponente p{font-size:.88rem;color:var(--ink-soft);line-height:1.55}
+  @media(max-width:760px){
+    .director{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .ponentes{grid-template-columns:1fr;max-width:380px;margin-inline:auto}
+  }
+
   /* MISIÓN / VISIÓN */
   .vmband{background:var(--grad-deep);color:var(--on-dark)}
   .vmband .wrap{display:grid;grid-template-columns:auto 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start}
@@ -312,6 +333,7 @@
         <li><a href="#diplomado">El Diplomado</a></li>
         <li><a href="#estructura">Estructura</a></li>
         <li><a href="#enfoque">El enfoque</a></li>
+        <li><a href="#docentes">Docentes</a></li>
         <li><a href="#inscripcion">Inscríbete</a></li>
       </ul>
     </nav>
@@ -481,6 +503,48 @@
       </article>
     </div>
     <p class="note-couple reveal">Este modelo no solo aplica entre padres e hijos: <strong>también se vive en la pareja.</strong></p>
+  </div>
+</section>
+
+<!-- PLANA DOCENTE -->
+<section class="section docentes" id="docentes">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="label center">Plana Docente</span>
+      <h2>Aprende de quienes marcan el rumbo</h2>
+      <p class="lead">Un director con trayectoria internacional y ponentes que son referentes mundiales de la terapia familiar sistémica.</p>
+    </div>
+
+    <article class="director reveal d1">
+      <img src="assets/ponentes/baldeon.jpg" width="380" height="380" alt="José Baldeón Valdivia, director de NovaNexus" />
+      <div>
+        <span class="role">Director · Creador del enfoque TENCA</span>
+        <h3>José Baldeón Valdivia <span class="flag">🇵🇪</span></h3>
+        <p>Psicoterapeuta familiar y de pareja. Magíster en Terapia Familiar Sistémica (U. Autónoma de Barcelona) y doctor en Psicoterapia del Amor. Creador del enfoque TENCA y autor de 11 libros sobre vínculos y sanación.</p>
+      </div>
+    </article>
+
+    <div class="ponentes-head reveal"><span class="label center">Ponentes Internacionales</span></div>
+    <div class="ponentes">
+      <article class="ponente reveal d1">
+        <img src="assets/ponentes/linares.jpg" width="380" height="380" alt="Dr. Juan Luis Linares, ponente internacional (España)" />
+        <h3>Dr. Juan Luis Linares</h3>
+        <span class="pais">🇪🇸 España</span>
+        <p>Autoridad mundial en Terapia Familiar Sistémica. Creador del Modelo de Nutrición Relacional y expresidente de la EFTA.</p>
+      </article>
+      <article class="ponente reveal d2">
+        <img src="assets/ponentes/cebeiro.jpg" width="380" height="380" alt="Dr. Marcelo Ceberio, ponente internacional (Argentina)" />
+        <h3>Dr. Marcelo Ceberio</h3>
+        <span class="pais">🇦🇷 Argentina</span>
+        <p>Referente de la terapia sistémica iberoamericana. Formado en el MRI de Palo Alto y director de la Escuela Sistémica Argentina.</p>
+      </article>
+      <article class="ponente reveal d3">
+        <img src="assets/ponentes/medina.jpg" width="380" height="380" alt="Dr. Raúl Medina, ponente internacional (México)" />
+        <h3>Dr. Raúl Medina</h3>
+        <span class="pais">🇲🇽 México</span>
+        <p>Creador de la Terapia Familiar Crítica de Tercer Orden. Doctor en Psicología Social e investigador de la Universidad de Guadalajara.</p>
+      </article>
+    </div>
   </div>
 </section>
 
