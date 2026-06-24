@@ -128,7 +128,11 @@
   .hero-stats .div-line{width:1px;height:34px;background:var(--gold-line);opacity:.5}
 
   .emblem{position:relative;display:flex;align-items:center;justify-content:center}
-  .emblem .halo{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(123,47,191,.18),rgba(43,143,224,.12) 55%,transparent 70%);filter:blur(26px)}
+  .emblem .halo{position:absolute;width:84%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(226,196,120,.42),rgba(123,47,191,.12) 58%,transparent 74%);filter:blur(26px)}
+  .emblem .sun{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:160%;aspect-ratio:1;border-radius:50%;pointer-events:none;
+    background:repeating-conic-gradient(from 4deg at 50% 50%,rgba(212,180,112,.62) 0deg 1.1deg,transparent 1.1deg 8.4deg);
+    -webkit-mask:radial-gradient(circle at 50% 50%,transparent 30%,#000 37%,transparent 63%);
+    mask:radial-gradient(circle at 50% 50%,transparent 30%,#000 37%,transparent 63%)}
   .emblem .medal{position:relative;z-index:2;width:min(100%,392px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 36%,#fffdf9,#fbf5ea 72%,#f4ead6 100%);display:flex;align-items:center;justify-content:center;padding:15%;box-shadow:0 40px 80px -34px rgba(57,3,182,.45),inset 0 0 0 1px rgba(196,168,104,.55)}
   .emblem .medal::before{content:"";position:absolute;inset:13px;border-radius:50%;border:1px solid rgba(196,168,104,.4)}
   .emblem .medal img{width:100%;filter:drop-shadow(0 16px 26px rgba(57,3,182,.2))}
@@ -346,6 +350,7 @@
       </div>
     </div>
     <div class="emblem reveal d2">
+      <div class="sun" aria-hidden="true"></div>
       <div class="halo"></div>
       <div class="medal">
         <img src="assets/novanexus-logo.png" width="589" height="396" alt="Logotipo de NovaNexus: tres personas formando un corazón" />
