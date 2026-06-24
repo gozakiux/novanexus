@@ -61,25 +61,27 @@
   body{font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:var(--cream);line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.03;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.09;letter-spacing:-.012em;color:var(--ink)}
-  h2{font-size:clamp(2rem,1.3rem+3vw,3.2rem)}
-  h3{font-size:clamp(1.2rem,1rem+.9vw,1.55rem);font-weight:500}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.09;letter-spacing:-.012em;color:var(--ink);text-wrap:balance}
+  h2{font-size:clamp(2rem,1.3rem + 3vw,3.2rem)}
+  h3{font-size:clamp(1.2rem,1rem + .9vw,1.55rem);font-weight:500}
   p{color:var(--ink-soft)}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   strong{color:var(--violet-700);font-weight:600}
 
   .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(22px,4vw,44px)}
-  section{position:relative}
+  section{position:relative;scroll-margin-top:84px}
+  .skip{position:absolute;left:-9999px;top:0;z-index:300;background:var(--violet-ink);color:var(--on-dark);padding:.7rem 1.1rem;border-radius:0 0 10px 0;font-weight:600;font-size:.9rem}
+  .skip:focus{left:0}
 
   .label{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink)}
   .label::before{content:"";width:30px;height:1px;background:var(--gold-line)}
   .label.on-dark{color:var(--gold)}
   .label.on-dark::before{background:var(--gold)}
   .label.center{justify-content:center}
-  .lead{font-size:clamp(1.05rem,.98rem+.4vw,1.2rem);line-height:1.7}
+  .lead{font-size:clamp(1.05rem,.98rem + .4vw,1.2rem);line-height:1.7}
 
-  .btn{display:inline-flex;align-items:center;gap:.6rem;justify-content:center;font-weight:600;font-size:.98rem;border-radius:999px;padding:1rem 1.7rem;cursor:pointer;border:0;transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .3s,color .3s;white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;justify-content:center;font-weight:600;font-size:.98rem;border-radius:999px;padding:1rem 1.7rem;cursor:pointer;border:0;transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .3s,color .3s;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
   .btn:focus-visible{outline:2px solid var(--gold-ink);outline-offset:3px}
   .btn svg{width:1.2em;height:1.2em;flex:none}
   .btn-wa{background:var(--wa);color:#fff;box-shadow:0 16px 34px -16px rgba(31,180,87,.7)}
@@ -111,12 +113,12 @@
   .burger.open span::before{top:0;transform:rotate(45deg)}.burger.open span::after{top:0;transform:rotate(-45deg)}
 
   /* HERO (claro, logo a color) */
-  .hero{position:relative;overflow:hidden;background:linear-gradient(172deg,#fdf9f2 0%,#f4ecdd 100%);border-bottom:1px solid var(--line);padding-block:clamp(3.5rem,2.5rem+6vw,7rem) clamp(4.5rem,3rem+7vw,8.5rem)}
+  .hero{position:relative;overflow:hidden;background:linear-gradient(172deg,#fdf9f2 0%,#f4ecdd 100%);border-bottom:1px solid var(--line);padding-block:clamp(3.5rem,2.5rem + 6vw,7rem) clamp(4.5rem,3rem + 7vw,8.5rem)}
   .hero::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,191,.12),transparent 62%);top:-220px;right:-120px;pointer-events:none}
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(196,168,104,.6),transparent)}
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(2rem,4vw,4rem);align-items:center}
   .hero .label{margin-bottom:1.9rem}
-  .hero h1{font-size:clamp(2.6rem,1.4rem+5.4vw,5rem);font-weight:300;margin-bottom:1.7rem;letter-spacing:-.02em}
+  .hero h1{font-size:clamp(2.6rem,1.4rem + 5.4vw,5rem);font-weight:300;margin-bottom:1.7rem;letter-spacing:-.02em}
   .hero h1 em{font-style:italic;font-weight:400;color:transparent;background:var(--grad-brand);-webkit-background-clip:text;background-clip:text}
   .hero p.lead{max-width:44ch;margin-bottom:1.5rem}
   .hero .quienes{font-size:.9rem;letter-spacing:.03em;color:var(--gold-ink);font-weight:700;margin-bottom:2.6rem}
@@ -140,11 +142,11 @@
 
   /* RIBBON (acento oscuro fino) */
   .ribbon{background:var(--violet-ink);color:var(--on-dark);padding-block:1.3rem;text-align:center}
-  .ribbon p{margin:0;font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(1.1rem,.95rem+.6vw,1.5rem);color:var(--on-dark)}
+  .ribbon p{margin:0;font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:clamp(1.1rem,.95rem + .6vw,1.5rem);color:var(--on-dark)}
   .ribbon .fl{color:var(--gold);font-style:normal;margin-inline:.5rem}
 
-  .section{padding-block:clamp(4.5rem,3rem+5.5vw,8.5rem)}
-  .section-head{max-width:60ch;margin-bottom:clamp(2.6rem,1.8rem+3vw,4rem)}
+  .section{padding-block:clamp(4.5rem,3rem + 5.5vw,8.5rem)}
+  .section-head{max-width:60ch;margin-bottom:clamp(2.6rem,1.8rem + 3vw,4rem)}
   .section-head.center{margin-inline:auto;text-align:center}
   .section-head .label{margin-bottom:1.1rem}
   .section-head h2{margin-bottom:1rem}
@@ -192,7 +194,7 @@
   .col{border-radius:var(--radius-lg);padding:2.2rem 2rem;position:relative;transition:transform .4s var(--ease)}
   .col:hover{transform:translateY(-5px)}
   .col .tag{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;display:inline-block;margin-bottom:.7rem}
-  .col h3{font-size:clamp(1.4rem,1.2rem+1vw,1.9rem);margin-bottom:.3rem;font-weight:500}
+  .col h3{font-size:clamp(1.4rem,1.2rem + 1vw,1.9rem);margin-bottom:.3rem;font-weight:500}
   .col .sub{font-size:.88rem;font-weight:600;margin-bottom:1.4rem;letter-spacing:.02em}
   .col ul{list-style:none;display:flex;flex-direction:column;gap:.9rem}
   .col li{display:flex;align-items:flex-start;gap:.8rem;font-weight:600;font-size:1.02rem}
@@ -218,10 +220,10 @@
 
   /* PLANA DOCENTE */
   .docentes{background:var(--paper)}
-  .director{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.4rem,3vw,2.6rem);align-items:center;max-width:900px;margin:0 auto 2.8rem;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,1rem+2vw,2.4rem);box-shadow:var(--shadow-sm)}
+  .director{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.4rem,3vw,2.6rem);align-items:center;max-width:900px;margin:0 auto 2.8rem;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.5rem,1rem + 2vw,2.4rem);box-shadow:var(--shadow-sm)}
   .director img{width:clamp(140px,20vw,200px);aspect-ratio:1;object-fit:cover;border-radius:18px;border:2px solid var(--gold-line);box-shadow:var(--shadow-md)}
   .director .role{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--gold-ink)}
-  .director h3{font-size:clamp(1.5rem,1.2rem+1.3vw,2.1rem);font-weight:500;margin:.45rem 0 .7rem}
+  .director h3{font-size:clamp(1.5rem,1.2rem + 1.3vw,2.1rem);font-weight:500;margin:.45rem 0 .7rem}
   .director h3 .flag{font-size:.7em;margin-left:.2rem}
   .director p{font-size:.98rem;color:var(--ink-soft)}
   .ponentes-head{text-align:center;margin-bottom:1.6rem}
@@ -238,11 +240,11 @@
   }
 
   /* MISIÓN / VISIÓN */
-  .vmband{background:var(--grad-deep);color:var(--on-dark)}
-  .vmband .wrap{display:grid;grid-template-columns:auto 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:start}
-  .vmband .label{align-self:center}
-  .vm-item h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.3rem;color:var(--on-dark);margin-bottom:.5rem}
-  .vm-item p{color:var(--on-dark-soft);font-size:.98rem;line-height:1.65}
+  .vmband{background:var(--grad-deep);color:var(--on-dark);text-align:center}
+  .vmband .label{justify-content:center;margin-bottom:1.7rem}
+  .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,3vw,3.5rem);max-width:860px;margin-inline:auto}
+  .vm-item h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.35rem;color:var(--on-dark);margin-bottom:.5rem}
+  .vm-item p{color:var(--on-dark-soft);font-size:.98rem;line-height:1.65;max-width:40ch;margin-inline:auto}
 
   /* FORM */
   .inscribe .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,4vw,3.5rem);align-items:center}
@@ -251,13 +253,13 @@
   .inscribe-copy p{font-size:1.04rem;margin-bottom:1.2rem}
   .inscribe-copy .alt{font-size:.92rem;color:var(--ink-soft)}
   .inscribe-copy .alt a{color:var(--violet-700);font-weight:600;border-bottom:1px solid var(--gold-line)}
-  .form-card{background:var(--paper);border-radius:var(--radius-lg);padding:clamp(1.7rem,1rem+2vw,2.5rem);box-shadow:var(--shadow-md);border:1px solid var(--line)}
+  .form-card{background:var(--paper);border-radius:var(--radius-lg);padding:clamp(1.7rem,1rem + 2vw,2.5rem);box-shadow:var(--shadow-md);border:1px solid var(--line)}
   .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.1rem}
   .field{display:flex;flex-direction:column;gap:.4rem}
   .field.full{grid-column:1/-1}
   .field label{font-weight:600;font-size:.8rem;letter-spacing:.04em;color:var(--ink);text-transform:uppercase}
   .field label .req{color:var(--gold-ink)}
-  .field input{width:100%;height:52px;padding:0 1rem;border:1px solid var(--line);border-radius:12px;font:inherit;font-size:1rem;line-height:normal;background:#fff;color:var(--ink);transition:.25s}
+  .field input{width:100%;height:52px;padding:0 1rem;border:1px solid var(--line);border-radius:12px;font:inherit;font-size:1rem;line-height:normal;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
   .field input::placeholder{color:#766e83;font-size:.95rem}
   .field input:focus{outline:2px solid var(--gold-ink);outline-offset:2px;border-color:var(--gold-line);box-shadow:none}
   .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -270,7 +272,7 @@
   .form-status a{color:inherit;font-weight:700;text-decoration:underline}
 
   /* FOOTER */
-  footer.foot{background:var(--violet-ink);color:var(--on-dark-soft);padding-block:clamp(2.6rem,2rem+2vw,3.6rem) 1.8rem}
+  footer.foot{background:var(--violet-ink);color:var(--on-dark-soft);padding-block:clamp(2.6rem,2rem + 2vw,3.6rem) 1.8rem}
   .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;align-items:start;margin-bottom:2.2rem}
   .foot-brand img{height:46px;margin-bottom:1rem}
   .foot-brand p{color:var(--on-dark-soft);max-width:34ch;font-size:.92rem}
@@ -287,7 +289,7 @@
   .wa-float svg{width:31px;height:31px}
   .wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--wa);z-index:-1;animation:pulse 2.6s ease-out infinite}
   .wa-float:hover{transform:scale(1.08)}
-  .wa-float .wa-label{position:absolute;right:70px;background:var(--violet-ink);color:var(--on-dark);font-weight:600;font-size:.85rem;padding:.55rem .9rem;border-radius:10px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:.3s var(--ease);pointer-events:none}
+  .wa-float .wa-label{position:absolute;right:70px;background:var(--violet-ink);color:var(--on-dark);font-weight:600;font-size:.85rem;padding:.55rem .9rem;border-radius:10px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity .3s var(--ease),transform .3s var(--ease);pointer-events:none}
   .wa-float:hover .wa-label{opacity:1;transform:translateX(0)}
   @keyframes pulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.7);opacity:0}}
 
@@ -302,7 +304,7 @@
     .diplo .diplo-head{grid-template-columns:1fr}.diplo-head .pill{justify-self:start}
     .feat{grid-template-columns:1fr 1fr}.feat-item:nth-child(2){border-right:0}.feat-item:nth-child(1),.feat-item:nth-child(2){border-bottom:1px solid var(--line)}
     .estructura-grid{grid-template-columns:1fr}
-    .vmband .wrap{grid-template-columns:1fr;gap:1.4rem;text-align:center}.vmband .label{justify-content:center}
+    .vm-grid{grid-template-columns:1fr;gap:1.4rem}
     .inscribe .wrap{grid-template-columns:1fr}
   }
   @media(max-width:760px){
@@ -321,6 +323,7 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
 <!-- NAV -->
 <header class="nav" id="top">
@@ -347,7 +350,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
@@ -495,7 +498,7 @@
         <h3>Hiere y limita</h3>
         <p class="sub">Forma una personalidad disfuncional</p>
         <ul>
-          <li><span class="mk">−</span><span>Indiferencia<small>Desconfirmación: "no te veo"</small></span></li>
+          <li><span class="mk">−</span><span>Indiferencia<small>Desconfirmación: «no te veo»</small></span></li>
           <li><span class="mk">−</span><span>Descalificación<small>Restar valor a lo que la persona siente</small></span></li>
           <li><span class="mk">−</span><span>Rechazo<small>Apartar en lugar de acoger</small></span></li>
         </ul>
@@ -516,7 +519,7 @@
     </div>
 
     <article class="director reveal d1">
-      <img src="assets/ponentes/baldeon.jpg" width="380" height="380" alt="José Baldeón Valdivia, director de NovaNexus" />
+      <img src="assets/ponentes/baldeon.jpg" width="380" height="380" loading="lazy" alt="José Baldeón Valdivia, director de NovaNexus" />
       <div>
         <span class="role">Director · Creador del enfoque TENCA</span>
         <h3>José Baldeón Valdivia <span class="flag">🇵🇪</span></h3>
@@ -527,19 +530,19 @@
     <div class="ponentes-head reveal"><span class="label center">Ponentes Internacionales</span></div>
     <div class="ponentes">
       <article class="ponente reveal d1">
-        <img src="assets/ponentes/linares.jpg" width="380" height="380" alt="Dr. Juan Luis Linares, ponente internacional (España)" />
+        <img src="assets/ponentes/linares.jpg" width="380" height="380" loading="lazy" alt="Dr. Juan Luis Linares, ponente internacional (España)" />
         <h3>Dr. Juan Luis Linares</h3>
         <span class="pais">🇪🇸 España</span>
         <p>Autoridad mundial en Terapia Familiar Sistémica. Creador del Modelo de Nutrición Relacional y expresidente de la EFTA.</p>
       </article>
       <article class="ponente reveal d2">
-        <img src="assets/ponentes/cebeiro.jpg" width="380" height="380" alt="Dr. Marcelo Ceberio, ponente internacional (Argentina)" />
+        <img src="assets/ponentes/cebeiro.jpg" width="380" height="380" loading="lazy" alt="Dr. Marcelo Ceberio, ponente internacional (Argentina)" />
         <h3>Dr. Marcelo Ceberio</h3>
         <span class="pais">🇦🇷 Argentina</span>
         <p>Referente de la terapia sistémica iberoamericana. Formado en el MRI de Palo Alto y director de la Escuela Sistémica Argentina.</p>
       </article>
       <article class="ponente reveal d3">
-        <img src="assets/ponentes/medina.jpg" width="380" height="380" alt="Dr. Raúl Medina, ponente internacional (México)" />
+        <img src="assets/ponentes/medina.jpg" width="380" height="380" loading="lazy" alt="Dr. Raúl Medina, ponente internacional (México)" />
         <h3>Dr. Raúl Medina</h3>
         <span class="pais">🇲🇽 México</span>
         <p>Creador de la Terapia Familiar Crítica de Tercer Orden. Doctor en Psicología Social e investigador de la Universidad de Guadalajara.</p>
@@ -549,16 +552,18 @@
 </section>
 
 <!-- MISIÓN / VISIÓN -->
-<section class="vmband section" style="padding-block:clamp(2.6rem,2rem+2vw,3.6rem)">
+<section class="vmband section" style="padding-block:clamp(2.6rem,2rem + 2vw,3.6rem)">
   <div class="wrap">
-    <span class="label on-dark reveal">Lo que nos mueve</span>
-    <div class="vm-item reveal d1">
-      <h3>Misión</h3>
-      <p>Acompañar y entrenar psicoterapeutas que transforman vidas, con alma, rigor y un valor humano real.</p>
-    </div>
-    <div class="vm-item reveal d2">
-      <h3>Visión</h3>
-      <p>Ser el centro de formación en psicoterapia más cercano y humano del Perú.</p>
+    <span class="label on-dark center reveal">Lo que nos mueve</span>
+    <div class="vm-grid">
+      <div class="vm-item reveal d1">
+        <h3>Misión</h3>
+        <p>Acompañar y entrenar psicoterapeutas que transforman vidas, con alma, rigor y un valor humano real.</p>
+      </div>
+      <div class="vm-item reveal d2">
+        <h3>Visión</h3>
+        <p>Ser el centro de formación en psicoterapia más cercano y humano del Perú.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -590,7 +595,7 @@
           </div>
           <div class="field full">
             <label for="correo">Correo electrónico <span class="req">*</span></label>
-            <input id="correo" name="Correo" type="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com" />
+            <input id="correo" name="Correo" type="email" required autocomplete="email" spellcheck="false" placeholder="tucorreo@ejemplo.com" />
           </div>
           <div class="field">
             <label for="celular">Celular <span class="req">*</span></label>
