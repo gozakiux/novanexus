@@ -127,16 +127,11 @@
   .hero-stats span{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
   .hero-stats .div-line{width:1px;height:34px;background:var(--gold-line);opacity:.5}
 
-  .emblem{position:relative;display:flex;align-items:center;justify-content:center}
-  .emblem .halo{position:absolute;width:84%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(226,196,120,.42),rgba(123,47,191,.12) 58%,transparent 74%);filter:blur(26px)}
-  .emblem .sun{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:160%;aspect-ratio:1;border-radius:50%;pointer-events:none;
-    background:repeating-conic-gradient(from 4deg at 50% 50%,rgba(212,180,112,.62) 0deg 1.1deg,transparent 1.1deg 8.4deg);
-    -webkit-mask:radial-gradient(circle at 50% 50%,transparent 30%,#000 37%,transparent 63%);
-    mask:radial-gradient(circle at 50% 50%,transparent 30%,#000 37%,transparent 63%)}
-  .emblem .medal{position:relative;z-index:2;width:min(100%,392px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 36%,#fffdf9,#fbf5ea 72%,#f4ead6 100%);display:flex;align-items:center;justify-content:center;padding:15%;box-shadow:0 40px 80px -34px rgba(57,3,182,.45),inset 0 0 0 1px rgba(196,168,104,.55)}
-  .emblem .medal::before{content:"";position:absolute;inset:13px;border-radius:50%;border:1px solid rgba(196,168,104,.4)}
-  .emblem .medal img{width:100%;filter:drop-shadow(0 16px 26px rgba(57,3,182,.2))}
-  .emblem .cap{position:absolute;z-index:3;bottom:1%;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--gold-ink);background:var(--paper);border:1px solid var(--gold-line);padding:.4rem .9rem;border-radius:999px;box-shadow:var(--shadow-sm)}
+  .emblem{position:relative;display:flex;align-items:center;justify-content:center;padding:1rem}
+  .emblem .halo{position:absolute;width:86%;height:86%;border-radius:50%;background:radial-gradient(circle,rgba(226,196,120,.3),rgba(123,47,191,.1) 60%,transparent 75%);filter:blur(30px)}
+  .logo-card{position:relative;z-index:2;width:min(100%,420px);background:#fffdfa;border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(1.8rem,1rem + 3vw,2.8rem);box-shadow:var(--shadow-md);text-align:center}
+  .logo-card img{width:100%;max-width:300px;height:auto;margin:0 auto;display:block}
+  .logo-card .logo-cap{display:block;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--line);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-ink)}
 
   /* RIBBON (acento oscuro fino) */
   .ribbon{background:var(--violet-ink);color:var(--on-dark);padding-block:1.3rem;text-align:center}
@@ -232,6 +227,10 @@
   .ponente h3{font-size:1.18rem;font-weight:500;margin-bottom:.25rem;line-height:1.2}
   .ponente .pais{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-ink);margin-bottom:.8rem}
   .ponente p{font-size:.88rem;color:var(--ink-soft);line-height:1.55}
+  .ponentes-note{max-width:48ch;margin:.6rem auto 0;font-size:.92rem;color:var(--ink-soft)}
+  .prof-link{display:inline-block;margin-top:.9rem;font-size:.88rem;font-weight:700;color:var(--violet-700);border-bottom:1px solid var(--gold-line)}
+  .prof-link:hover{color:var(--violet-500)}
+  .diplo-cta{flex-wrap:wrap}
   @media(max-width:760px){
     .director{grid-template-columns:1fr;text-align:center;justify-items:center}
     .ponentes{grid-template-columns:1fr;max-width:380px;margin-inline:auto}
@@ -298,7 +297,7 @@
   @media(max-width:980px){
     .hero-grid{grid-template-columns:1fr;text-align:center}
     .hero p.lead{margin-inline:auto}.hero .label{justify-content:center}.hero-cta,.hero-stats{justify-content:center}
-    .emblem{order:-1;margin-bottom:1.4rem}.emblem .medal{width:min(72%,290px)}
+    .emblem{order:-1;margin-bottom:1.4rem}.logo-card{width:min(88%,360px)}
     .diplo .diplo-head{grid-template-columns:1fr}.diplo-head .pill{justify-self:start}
     .feat{grid-template-columns:1fr 1fr}.feat-item:nth-child(2){border-right:0}.feat-item:nth-child(1),.feat-item:nth-child(2){border-bottom:1px solid var(--line)}
     .estructura-grid{grid-template-columns:1fr}
@@ -354,9 +353,9 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="label reveal">Centro de Formación de Psicoterapeutas</span>
-      <h1 class="reveal d1">Aprende el <em>arte de amar</em> saludablemente.</h1>
-      <p class="lead reveal d2"><strong>Te acompañamos y entrenamos.</strong> Una formación cercana, rigurosa y profundamente humana para quienes eligen acompañar a otros — y para quienes quieren sanar.</p>
-      <p class="quienes reveal d2">Psicólogos · Estudiantes · Terapeutas · Parejas · Crecimiento personal</p>
+      <h1 class="reveal d1">Transforma tu práctica clínica desde el <em>poder terapéutico del amor</em>.</h1>
+      <p class="lead reveal d2"><strong>Te capacitamos y entrenamos.</strong> Una formación clínica rigurosa y científica en la Terapia Narrativa Centrada en el Amor (TENCA), para psicoterapeutas que quieren renovar su práctica.</p>
+      <p class="quienes reveal d2">Para psicólogos, psicoterapeutas y profesionales de la salud mental</p>
       <div class="hero-cta reveal d3">
         <a class="btn btn-gold" href="#inscripcion">Déjanos tus datos</a>
         <a class="btn btn-wa" href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Diplomado." target="_blank" rel="noopener noreferrer">
@@ -373,12 +372,11 @@
       </div>
     </div>
     <div class="emblem reveal d2">
-      <div class="sun" aria-hidden="true"></div>
       <div class="halo"></div>
-      <div class="medal">
-        <img src="assets/novanexus-logo.png" width="589" height="396" alt="Logotipo de NovaNexus: tres personas formando un corazón" />
+      <div class="logo-card">
+        <img src="assets/novanexus-logo.png" width="589" height="396" alt="NovaNexus — Centro de Formación de Psicoterapeutas" />
+        <span class="logo-cap">Desde Lima · Perú</span>
       </div>
-      <span class="cap">Desde Lima · Perú</span>
     </div>
   </div>
 </section>
@@ -386,7 +384,7 @@
 <!-- RIBBON -->
 <div class="ribbon">
   <div class="wrap">
-    <p>Sanar también se aprende. <span class="fl">·</span> Y amar bien, también se enseña.</p>
+    <p>El desamor enferma. <span class="fl">·</span> El Amor sana.</p>
   </div>
 </div>
 
@@ -397,7 +395,7 @@
       <div>
         <span class="label">El Diplomado</span>
         <h2>Diplomado de Actualización en Psicoterapia</h2>
-        <p>Tres meses para renovar tu mirada, profundizar tu práctica y volver a tu consulta con herramientas nuevas y un sentido renovado.</p>
+        <p><strong>«La Resiliencia del Amor»</strong> — un nuevo paradigma desde la Terapia Narrativa Centrada en el Amor (TENCA). Tres meses para renovar tu práctica clínica con un marco teórico sólido y herramientas nuevas.</p>
       </div>
       <span class="pill"><span class="dot" aria-hidden="true"></span>Convocatoria abierta · cupos limitados</span>
     </div>
@@ -417,12 +415,13 @@
       </article>
       <article class="feat-item">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <b>Acompañamiento real</b><span>Caminamos a tu lado de principio a fin</span>
+        <b>Seguimiento cercano</b><span>Te guiamos en cada etapa de tu formación</span>
       </article>
     </div>
 
     <div class="diplo-cta reveal d2">
       <a class="btn btn-gold" href="#inscripcion">Quiero inscribirme</a>
+      <a class="btn btn-line" href="assets/brochure-novanexus.pdf" target="_blank" rel="noopener noreferrer">Ver brochure (PDF)</a>
       <a class="btn btn-line" href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20los%20detalles%20del%20Diplomado%20de%20Actualizaci%C3%B3n%20en%20Psicoterapia." target="_blank" rel="noopener noreferrer">Detalles por WhatsApp</a>
     </div>
   </div>
@@ -434,7 +433,7 @@
     <div class="section-head reveal">
       <span class="label">Estructura del Diplomado</span>
       <h2>Una experiencia exclusiva, con cupos limitados.</h2>
-      <p class="lead">Cada promoción se vive en grupos reducidos, con un acompañamiento real de principio a fin. No es masivo: es personal.</p>
+      <p class="lead">Cada promoción se vive en grupos reducidos, con seguimiento cercano de principio a fin. No es masivo: es personal.</p>
     </div>
     <div class="estructura-grid">
       <div class="specs reveal d1">
@@ -459,9 +458,9 @@
       <div class="mat-panel reveal d2">
         <h3>Cómo es la matrícula</h3>
         <div class="mat">
-          <div class="mat-row"><span class="m">I</span><div><b>El inicio se comunica</b><small>Cada promoción tiene una fecha de inicio que anunciamos por convocatoria. Déjanos tus datos y te avisamos.</small></div></div>
-          <div class="mat-row"><span class="m">II</span><div><b>Te integras solo al inicio</b><small>La matrícula está abierta durante las primeras semanas de cada promoción.</small></div></div>
-          <div class="mat-row close"><span class="m">III</span><div><b>Luego se cierra</b><small>Para que vivas la formación completa desde el primer día. Si ya avanzó, reservamos tu cupo para la siguiente.</small></div></div>
+          <div class="mat-row"><span class="m">I</span><div><b>Apertura de convocatoria</b><small>Cada promoción tiene una fecha de inicio que anunciamos por convocatoria. Déjanos tus datos y te avisamos.</small></div></div>
+          <div class="mat-row"><span class="m">II</span><div><b>Incorporación al inicio del programa</b><small>La matrícula permanece abierta solo durante las primeras semanas de cada promoción.</small></div></div>
+          <div class="mat-row close"><span class="m">III</span><div><b>Cierre de admisiones</b><small>Para garantizar tu formación completa desde el primer día. Si la promoción ya avanzó, reservamos tu cupo para la siguiente.</small></div></div>
         </div>
       </div>
     </div>
@@ -473,14 +472,14 @@
   <div class="wrap">
     <div class="section-head center reveal">
       <span class="label center">Nuestro enfoque</span>
-      <h2>El arte de amar saludablemente</h2>
+      <h2>El desamor enferma, el amor sana</h2>
     </div>
     <div class="enfoque-intro reveal d1">
       <p>Nuestro modelo es la <strong>Terapia Narrativa Centrada en el Amor (TENCA)</strong>, y parte de una idea simple: todo ser humano necesita ser nutrido amorosamente. Según cómo se cumpla esa función afectiva —en la familia y en la pareja— la identidad toma un rumbo distinto. Eso es lo que aprendes a reconocer y transformar.</p>
     </div>
     <div class="compare">
       <article class="col tac reveal d1">
-        <span class="tag">El TAC amoroso</span>
+        <span class="tag">El amor que sana</span>
         <h3>Nutre y construye</h3>
         <p class="sub">Forma una identidad saludable</p>
         <ul>
@@ -492,7 +491,7 @@
       </article>
       <div class="vs reveal d2">vs</div>
       <article class="col ider reveal d3">
-        <span class="tag">El IDER desamoroso</span>
+        <span class="tag">El desamor que enferma</span>
         <h3>Hiere y limita</h3>
         <p class="sub">Forma una personalidad disfuncional</p>
         <ul>
@@ -513,7 +512,7 @@
     <div class="section-head center reveal">
       <span class="label center">Plana Docente</span>
       <h2>Aprende de quienes marcan el rumbo</h2>
-      <p class="lead">Un director con trayectoria internacional y ponentes que son referentes mundiales de la terapia familiar sistémica.</p>
+      <p class="lead">El diplomado está a cargo del Dr. José Baldeón. Lo complementan seminarios con ponentes internacionales invitados, referentes mundiales de la terapia familiar sistémica.</p>
     </div>
 
     <article class="director reveal d1">
@@ -522,10 +521,14 @@
         <span class="role">Director · Creador del enfoque TENCA</span>
         <h3>José Baldeón Valdivia <span class="flag">🇵🇪</span></h3>
         <p>Psicoterapeuta familiar y de pareja. Magíster en Terapia Familiar Sistémica (U. Autónoma de Barcelona) y doctor en Psicoterapia del Amor. Creador del enfoque TENCA y autor de 11 libros sobre vínculos y sanación.</p>
+        <a class="prof-link" href="https://linktr.ee/doctorjosebaldeon" target="_blank" rel="noopener noreferrer">Ver perfil completo →</a>
       </div>
     </article>
 
-    <div class="ponentes-head reveal"><span class="label center">Ponentes Internacionales</span></div>
+    <div class="ponentes-head reveal">
+      <span class="label center">Ponentes Internacionales Invitados</span>
+      <p class="ponentes-note">Docentes invitados que dictan los seminarios internacionales que complementan el diplomado.</p>
+    </div>
     <div class="ponentes">
       <article class="ponente reveal d1">
         <img src="assets/ponentes/linares.jpg" width="380" height="380" loading="lazy" alt="Dr. Juan Luis Linares, ponente internacional (España)" />
@@ -556,11 +559,11 @@
     <div class="vm-grid">
       <div class="vm-item reveal d1">
         <h3>Misión</h3>
-        <p>Acompañar y entrenar psicoterapeutas que transforman vidas, con alma, rigor y un valor humano real.</p>
+        <p>Formar psicoterapeutas capaces de transformar el sufrimiento humano desde una comprensión relacional, narrativa y amorosa, con rigor clínico y científico.</p>
       </div>
       <div class="vm-item reveal d2">
         <h3>Visión</h3>
-        <p>Ser el centro de formación en psicoterapia más cercano y humano del Perú.</p>
+        <p>Ser un referente latinoamericano en la formación avanzada de psicoterapeutas, impulsando un paradigma que reconoce el amor como fuerza transformadora del cambio terapéutico.</p>
       </div>
     </div>
   </div>
@@ -571,8 +574,8 @@
   <div class="wrap">
     <div class="inscribe-copy reveal">
       <span class="label">Inscripciones</span>
-      <h2>Déjanos tus datos y te contactamos.</h2>
-      <p>Cuéntanos quién eres. Te escribimos pronto, sin compromiso, para resolver tus dudas y acompañarte en tu próximo paso.</p>
+      <h2>Comparte tus datos y conoce si esta formación es para ti.</h2>
+      <p>Déjanos tus datos y te contactamos pronto, sin compromiso, para resolver tus dudas y contarte si el Diplomado es para ti.</p>
       <p class="alt">¿Prefieres escribir directo? <a href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Diplomado." target="_blank" rel="noopener noreferrer">Háblanos por WhatsApp</a> o a <a href="mailto:admision@novanexus.pe">admision@novanexus.pe</a></p>
     </div>
 
@@ -604,8 +607,8 @@
             <input id="distrito" name="Distrito" type="text" required autocomplete="address-level3" placeholder="Ej. Miraflores" />
           </div>
           <div class="field full">
-            <label for="ocupacion">Ocupación o cargo <span class="req">*</span></label>
-            <input id="ocupacion" name="Ocupación / Cargo" type="text" required autocomplete="organization-title" placeholder="Ej. Psicólogo, estudiante, terapeuta…" />
+            <label for="ocupacion">Profesión u ocupación <span class="req">*</span></label>
+            <input id="ocupacion" name="Profesión u ocupación" type="text" required autocomplete="organization-title" placeholder="Ej. Psicólogo, psicoterapeuta…" />
           </div>
         </div>
         <button type="submit" class="btn btn-gold">Enviar mis datos</button>
@@ -626,7 +629,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="assets/novanexus-logo-white.png" width="252" height="179" alt="NovaNexus" />
-        <p>Centro de Formación de Psicoterapeutas. Te acompañamos y entrenamos para que aprendas el arte de amar saludablemente.</p>
+        <p>Centro de Formación de Psicoterapeutas. Te capacitamos y entrenamos en la Terapia Narrativa Centrada en el Amor (TENCA).</p>
       </div>
       <div>
         <h4>Explora</h4>
