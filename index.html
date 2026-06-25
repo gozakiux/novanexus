@@ -230,14 +230,13 @@
   .ponentes-note{max-width:48ch;margin:.6rem auto 0;font-size:.92rem;color:var(--ink-soft)}
   .prof-link{display:inline-block;margin-top:.9rem;font-size:.88rem;font-weight:700;color:var(--violet-700);border-bottom:1px solid var(--gold-line)}
   .prof-link:hover{color:var(--violet-500)}
-  .diplo-cta{flex-wrap:wrap}
   @media(max-width:760px){
     .director{grid-template-columns:1fr;text-align:center;justify-items:center}
     .ponentes{grid-template-columns:1fr;max-width:380px;margin-inline:auto}
   }
 
   /* MISIÓN / VISIÓN */
-  .vmband{background:var(--grad-deep);color:var(--on-dark);text-align:center}
+  .vmband{background:var(--grad-deep);color:var(--on-dark);text-align:center;padding-block:clamp(2.6rem,2rem + 2vw,3.6rem)}
   .vmband .label{justify-content:center;margin-bottom:1.7rem}
   .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,3vw,3.5rem);max-width:860px;margin-inline:auto}
   .vm-item h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.35rem;color:var(--on-dark);margin-bottom:.5rem}
@@ -349,16 +348,16 @@
 
 <main id="main">
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="label reveal">Centro de Formación de Psicoterapeutas</span>
-      <h1 class="reveal d1">Transforma tu práctica clínica desde el <em>poder terapéutico del amor</em>.</h1>
+      <h1 id="hero-title" class="reveal d1">Transforma tu práctica clínica desde el <em>poder terapéutico del amor</em>.</h1>
       <p class="lead reveal d2"><strong>Te capacitamos y entrenamos.</strong> Una formación clínica rigurosa y científica en la Terapia Narrativa Centrada en el Amor (TENCA), para psicoterapeutas que quieren renovar su práctica.</p>
       <p class="quienes reveal d2">Para psicólogos, psicoterapeutas y profesionales de la salud mental</p>
       <div class="hero-cta reveal d3">
         <a class="btn btn-gold" href="#inscripcion">Déjanos tus datos</a>
-        <a class="btn btn-wa" href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Diplomado." target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-wa" href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Diplomado." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           WhatsApp
         </a>
@@ -421,8 +420,8 @@
 
     <div class="diplo-cta reveal d2">
       <a class="btn btn-gold" href="#inscripcion">Quiero inscribirme</a>
-      <a class="btn btn-line" href="assets/brochure-novanexus.pdf" target="_blank" rel="noopener noreferrer">Ver brochure (PDF)</a>
-      <a class="btn btn-line" href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20los%20detalles%20del%20Diplomado%20de%20Actualizaci%C3%B3n%20en%20Psicoterapia." target="_blank" rel="noopener noreferrer">Detalles por WhatsApp</a>
+      <a class="btn btn-line" href="assets/brochure-novanexus.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver brochure en PDF (se abre en una pestaña nueva)">Ver brochure (PDF)</a>
+      <a class="btn btn-wa" href="https://wa.me/51941658517?text=Hola%20NovaNexus%2C%20quiero%20los%20detalles%20del%20Diplomado%20de%20Actualizaci%C3%B3n%20en%20Psicoterapia." target="_blank" rel="noopener noreferrer" aria-label="Detalles del Diplomado por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>Detalles por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -521,7 +520,7 @@
         <span class="role">Director · Creador del enfoque TENCA</span>
         <h3>José Baldeón Valdivia <span class="flag">🇵🇪</span></h3>
         <p>Psicoterapeuta familiar y de pareja. Magíster en Terapia Familiar Sistémica (U. Autónoma de Barcelona) y doctor en Psicoterapia del Amor. Creador del enfoque TENCA y autor de 11 libros sobre vínculos y sanación.</p>
-        <a class="prof-link" href="https://linktr.ee/doctorjosebaldeon" target="_blank" rel="noopener noreferrer">Ver perfil completo →</a>
+        <a class="prof-link" href="https://linktr.ee/doctorjosebaldeon" target="_blank" rel="noopener noreferrer" aria-label="Ver el perfil completo del Dr. José Baldeón (se abre en una pestaña nueva)">Ver perfil completo →</a>
       </div>
     </article>
 
@@ -553,7 +552,7 @@
 </section>
 
 <!-- MISIÓN / VISIÓN -->
-<section class="vmband section" style="padding-block:clamp(2.6rem,2rem + 2vw,3.6rem)">
+<section class="vmband section">
   <div class="wrap">
     <span class="label on-dark center reveal">Lo que nos mueve</span>
     <div class="vm-grid">
@@ -690,7 +689,7 @@
     try{
       var res=await fetch('https://formsubmit.co/ajax/admision@novanexus.pe',{method:'POST',headers:{'Accept':'application/json'},body:data});
       var json=await res.json().catch(function(){return {};});
-      if(!res.ok || json.success==='false') throw new Error(json.message||'bad');
+      if(!res.ok || json.success!=='true') throw new Error(json.message||'bad');
       status.className='form-status ok';
       status.innerHTML='¡Gracias! Recibimos tus datos. Te contactaremos muy pronto.';
       form.reset();
